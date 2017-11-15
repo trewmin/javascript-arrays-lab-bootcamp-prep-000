@@ -18,14 +18,12 @@ function destructivelyRemoveFirstKitten() {
 }
 
 function appendKitten(name) {
-  const newKit = kittens
-  newKit.push(name)
+  const newKit = [...kittens, name];
   return newKit
 }
 
 function prependKitten(name) {
-  const newKit = kittens
-  newKit.unshift(name)
+  const newKit = [name, ...kittens];
   return newKit
 }
 
